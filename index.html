@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SGPA and CGPA Calculator</title>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>CGPA Calculator</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">About Calculator</a></li>
+                <li><a href="#sgpaSection">SGPA Calculator</a></li>
+                <li><a href="#cgpaSection">CGPA Calculator</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        
+        <section id="about">
+            <h2>About Calculator</h2>
+            <p><strong>SGPA (Semester Grade Point Average):</strong> SGPA is a measure of a student's academic performance in a given semester. It is calculated by taking the weighted average of grade points obtained in all the courses registered by the student during the semester.</p>
+            <p><strong>Formula for SGPA:</strong></p>
+            <p>
+                \( \text{SGPA} = \frac{{\sum (C_i \times G_i)}}{{\sum C_i}} \)
+                <br>
+                where \( C_i \) is the number of credits for the \( i \)-th course and \( G_i \) is the grade point obtained in the \( i \)-th course.
+            </p>
+            <p><strong>CGPA (Cumulative Grade Point Average):</strong> CGPA is a measure of a student's academic performance across all semesters completed so far. It is calculated by taking the weighted average of the SGPA of all the semesters.</p>
+            <p><strong>Formula for CGPA:</strong></p>
+            <p>
+                \( \text{CGPA} = \frac{{\sum (S_j \times C_j)}}{{\sum C_j}} \)
+                <br>
+                where \( S_j \) is the SGPA of the \( j \)-th semester and \( C_j \) is the total number of credits in that semester.
+            </p>
+        </section>
+        
+        <section id="gradeTables">
+            <div id="theoryTable">
+                <h2>Theory Subjects</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Marks Range</th>
+                            <th>Grade Point</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>81-100</td>
+                            <td>10</td>
+                        </tr>
+                        <tr>
+                            <td>71-80</td>
+                            <td>9</td>
+                        </tr>
+                        <tr>
+                            <td>61-70</td>
+                            <td>8</td>
+                        </tr>
+                        <tr>
+                            <td>53-60</td>
+                            <td>7</td>
+                        </tr>
+                        <tr>
+                            <td>47-52</td>
+                            <td>6</td>
+                        </tr>
+                        <tr>
+                            <td>42-46</td>
+                            <td>5</td>
+                        </tr>
+                        <tr>
+                            <td>36-41</td>
+                            <td>4</td>
+                        </tr>
+                        <tr>
+                            <td>0-35</td>
+                            <td>0</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        
+            <div id="labTable">
+                <h2>Lab Subjects</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Marks Range</th>
+                            <th>Grade Point</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>41-50</td>
+                            <td>10</td>
+                        </tr>
+                        <tr>
+                            <td>35-40</td>
+                            <td>9</td>
+                        </tr>
+                        <tr>
+                            <td>32-34</td>
+                            <td>8</td>
+                        </tr>
+                        <tr>
+                            <td>30-31</td>
+                            <td>7</td>
+                        </tr>
+                        <tr>
+                            <td>25-29</td>
+                            <td>6</td>
+                        </tr>
+                        <tr>
+                            <td>22-24</td>
+                            <td>5</td>
+                        </tr>
+                        <tr>
+                            <td>18-21</td>
+                            <td>4</td>
+                        </tr>
+                        <tr>
+                            <td>0-17</td>
+                            <td>0</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+        <section id="sgpaSection">
+            <h2>SGPA Calculator</h2>
+            <form id="sgpaForm">
+                <label for="semesterSelect">Select Semester:</label>
+                <select id="semesterSelect">
+                    <option value="1">1st Semester</option>
+                    <option value="2">2nd Semester</option>
+                    <option value="3">3rd Semester</option>
+                    <option value="4">4th Semester</option>
+                    <option value="5">5th Semester</option>
+                    <option value="6">6th Semester</option>
+                    <option value="7">7th Semester</option>
+                    <option value="8">8th Semester</option>
+                </select>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Subject</th>
+                            <th>Quiz 1 (/10)</th>
+                            <th>Quiz 2 (/10)</th>
+                            <th>Mid Sem (/30)</th>
+                            <th>End Sem (/100)</th>
+                            <th>Tutorial (/25)</th>
+                            <th>Total</th>
+                            <th>Grade Point</th>
+                            <th>Credit Lec</th>
+                            <th>Lab Marks (/50)</th>
+                            <th>Total</th>
+                            <th>Grade Point</th>
+                            <th>Credit Lab</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="subjectsTableBody">
+                        <!-- Rows for each subject will be inserted here by JavaScript -->
+                    </tbody>
+                </table>
+                <div class="buttons">
+                    <button type="button" onclick="addSubject()">Add Subject</button>
+                    <button type="button" onclick="calculateSGPA()">Calculate SGPA</button>
+                    <button type="button" onclick="saveSGPA()">Save SGPA</button>
+                </div>
+            </form>
+            <div id="results"></div>
+        </section>
+        <section id="cgpaSection">
+            <h2>CGPA Calculator</h2>
+            <div id="semesterSgpas"></div>
+            <div id="calculateCgpaButton">
+                <button type="button" onclick="calculateCGPA()">Calculate CGPA</button>
+            </div>
+            <div id="cgpaResults"></div>
+        </section>
+
+    </main>
+    <footer>
+        <p>&copy; 2024 SGPA and CGPA Calculator created by PURV PATEL - IIIT SURAT</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

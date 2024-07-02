@@ -1,0 +1,320 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #6db6ff;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+nav {
+    background-color: #357ABD;
+    padding: 10px 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #FFD700;
+}
+
+footer {
+    background-color: #6db6ff;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+}
+
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+h1, h2 {
+    background-color: #6db6ff;
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: 'Poppins', sans-serif;
+}
+
+h3 {
+    color: #357ABD;
+    font-family: 'Poppins', sans-serif;
+}
+
+form {
+    width: 97.5%;
+    margin-bottom: 20px;
+    background-color: #fff;
+    padding: 16px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    font-weight: 600;
+    margin-right: 10px;
+}
+
+select, input[type="number"] {
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    width: 105px;
+    box-sizing: border-box;
+    appearance: none; 
+    text-align: center; /* Center-align text */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 12px;
+    text-align: center;
+}
+th {
+    background-color: #f2f2f2;
+    color: #333;
+    font-weight: 600;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+input, input[type="number"] {
+    -moz-appearance: textfield;
+    appearance: textfield;
+    padding: 5px; /* Increased padding for better visibility */
+    font-size: 16px; /* Larger font size for better readability */
+    transition: border-color 0.3s ease-in-out; /* Smooth border transition */
+    border: 2px solid #ccc; /* Light border */
+    border-radius: 6px; /* Rounded corners */
+    width: 100%; /* Full width */
+    box-sizing: border-box; /* Ensure padding doesn't increase width */
+    outline: none; /* Remove outline on focus */
+    text-align: center; /* Center-align text */
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #4A90E2;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 5px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #6db6ff;
+}
+
+#results, #cgpaResults {
+    font-weight: 600;
+    padding: 15px;
+    background-color: #e2e3e5;
+    border-radius: 4px;
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.remove-button {
+    padding: 5px 10px;
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.remove-button:hover {
+    background-color: #c82333;
+}
+
+#semesterSgpas {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 20px;
+    gap: 15px;
+}
+
+.semester-input-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+}
+
+.semester-input-group label {
+    margin-bottom: 5px;
+}
+
+.semester-input-group input {
+    width: 100px;
+    text-align: center;
+}
+
+.semester-label {
+    margin-right: 10px;
+    font-weight: 600;
+}
+
+#calculateCgpaButton {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    .buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    button {
+        margin-bottom: 10px;
+        width: 100%;
+    }
+
+    .semester-input-group {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .semester-input {
+        width: 100%;
+    }
+}
+
+#gradeTables {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    gap: 90px;
+}
+
+#theoryTable,
+#labTable {
+    width: 100%; 
+}
+
+#theoryTable table,
+#labTable table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+#theoryTable table th,
+#theoryTable table td,
+#labTable table th,
+#labTable table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+#theoryTable table th,
+#labTable table th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    #gradeTables {
+        grid-template-columns: 1fr; /* Single column layout on smaller screens */
+    }
+}
+
+
+#about {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #f2f2f2;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
+}
+#about p {
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+#about strong {
+    font-weight: bold;
+}
+
+#about p:first-of-type {
+    margin-top: 0;
+}
